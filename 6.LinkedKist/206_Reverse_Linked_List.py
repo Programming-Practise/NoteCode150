@@ -11,3 +11,13 @@ class Solution:
 
         return pre
 
+class Solution:
+    def reverseList(self, head: ListNode | None) -> ListNode | None:
+        cur = head
+        pre = None
+        while cur:
+            temp = cur.next
+            cur.next = pre
+            pre = cur
+            cur = temp
+        return pre
